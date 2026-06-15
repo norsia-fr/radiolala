@@ -1,0 +1,55 @@
+name: Release
+
+# Au push d'un tag vX.Y.Z : build, empaquetage du dist, création/maj de la
+# Release GitHub avec le dist.zip en pièce jointe et les notes du changelog.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Package dist
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          cp -r dist "radiolala-$VERSION"
+          zip -qr "radiolala-$VERSION-dist.zip" "radiolala-$VERSION"
+
+      - name: Extract changelog section
+        run: |
+          awk -v v="### Version ${VERSION} " 'index($0, v)==1 {f=1; next} /^### Version / && f {exit} f' \
+            src/assets/nouveautes.md > RELEASE_BODY.md
+          [ -s RELEASE_BODY.md ] || echo "Version ${VERSION}" > RELEASE_BODY.md
+
+      - name: Create or update release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "radiolala-$VERSION-dist.zip" --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" \
+              --title "Radiolala $VERSION" \
+              --notes-file RELEASE_BODY.md \
+              "radiolala-$VERSION-dist.zip"
+          fi
