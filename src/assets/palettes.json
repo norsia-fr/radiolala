@@ -1,0 +1,110 @@
+[
+  {
+    "id": "p-coucher-soleil",
+    "name": "Coucher de soleil",
+    "builtin": true,
+    "colors": ["#ff5722", "#ff7f50", "#ffa726", "#ffd54f", "#ffeb3b"],
+    "player": {
+      "bgColor": "#1a0e08",
+      "playerBgColor": "#3a1a0a",
+      "playerElmtsColor": "#ffd9b3",
+      "playerTitleColor": "#ffa726",
+      "playerBtnPlayColor": "#ff7f50",
+      "playerBtnPlayIconColor": "#3a1a0a",
+      "playerBtnStopColor": "#ff5722",
+      "playerBtnStopColorInactif": "#6b2a14",
+      "playerBtnStopIconColor": "#ffffff",
+      "playerBtnStopIconColorInactif": "#a3a3a3"
+    }
+  },
+  {
+    "id": "p-ocean",
+    "name": "Océan",
+    "builtin": true,
+    "colors": ["#0d3b66", "#1d6fa5", "#2a9d8f", "#a8dadc", "#e0fbfc"],
+    "player": {
+      "bgColor": "#061a26",
+      "playerBgColor": "#0d3b66",
+      "playerElmtsColor": "#cfeefc",
+      "playerTitleColor": "#2a9d8f",
+      "playerBtnPlayColor": "#1d6fa5",
+      "playerBtnPlayIconColor": "#e0fbfc",
+      "playerBtnStopColor": "#e76f51",
+      "playerBtnStopColorInactif": "#5a2c20",
+      "playerBtnStopIconColor": "#ffffff",
+      "playerBtnStopIconColorInactif": "#a3a3a3"
+    }
+  },
+  {
+    "id": "p-foret",
+    "name": "Forêt",
+    "builtin": true,
+    "colors": ["#2d6a4f", "#52796f", "#7c9a5c", "#a3b18a", "#dad7cd"],
+    "player": {
+      "bgColor": "#0e1a12",
+      "playerBgColor": "#2d6a4f",
+      "playerElmtsColor": "#dad7cd",
+      "playerTitleColor": "#a3b18a",
+      "playerBtnPlayColor": "#52796f",
+      "playerBtnPlayIconColor": "#dad7cd",
+      "playerBtnStopColor": "#bc6c25",
+      "playerBtnStopColorInactif": "#4a2e10",
+      "playerBtnStopIconColor": "#ffffff",
+      "playerBtnStopIconColorInactif": "#a3a3a3"
+    }
+  },
+  {
+    "id": "p-pastel",
+    "name": "Pastel",
+    "builtin": true,
+    "colors": ["#fde2e4", "#fad2e1", "#c5dedd", "#b8e0d2", "#dbcdf0"],
+    "player": {
+      "bgColor": "#fff5f7",
+      "playerBgColor": "#fad2e1",
+      "playerElmtsColor": "#6d6875",
+      "playerTitleColor": "#8a4f6d",
+      "playerBtnPlayColor": "#c5dedd",
+      "playerBtnPlayIconColor": "#41555a",
+      "playerBtnStopColor": "#f7a1c4",
+      "playerBtnStopColorInactif": "#e3c5d2",
+      "playerBtnStopIconColor": "#5a3a4a",
+      "playerBtnStopIconColorInactif": "#9a8a92"
+    }
+  },
+  {
+    "id": "p-vibrant",
+    "name": "Vibrant",
+    "builtin": true,
+    "colors": ["#ff006e", "#fb5607", "#ffbe0b", "#8338ec", "#3a86ff"],
+    "player": {
+      "bgColor": "#0d0221",
+      "playerBgColor": "#240046",
+      "playerElmtsColor": "#e0c3fc",
+      "playerTitleColor": "#ffbe0b",
+      "playerBtnPlayColor": "#3a86ff",
+      "playerBtnPlayIconColor": "#ffffff",
+      "playerBtnStopColor": "#ff006e",
+      "playerBtnStopColorInactif": "#6b0030",
+      "playerBtnStopIconColor": "#ffffff",
+      "playerBtnStopIconColorInactif": "#a3a3a3"
+    }
+  },
+  {
+    "id": "p-monochrome",
+    "name": "Monochrome",
+    "builtin": true,
+    "colors": ["#2b2d42", "#4a4e69", "#7f8693", "#a4a9b1", "#d1d5db"],
+    "player": {
+      "bgColor": "#1a1b26",
+      "playerBgColor": "#2b2d42",
+      "playerElmtsColor": "#d1d5db",
+      "playerTitleColor": "#a4a9b1",
+      "playerBtnPlayColor": "#4a4e69",
+      "playerBtnPlayIconColor": "#d1d5db",
+      "playerBtnStopColor": "#7f8693",
+      "playerBtnStopColorInactif": "#3a3d4a",
+      "playerBtnStopIconColor": "#ffffff",
+      "playerBtnStopIconColorInactif": "#a3a3a3"
+    }
+  }
+]

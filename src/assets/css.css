@@ -1,0 +1,285 @@
+/* importer font merriweather qui est dans assets/fonts */
+
+/* anita */
+@font-face {
+    font-family: 'Anita';
+    src: url(./fonts/anita.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Appopaint';
+    src: url(./fonts/appopaint.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url(./fonts/barlow-latin.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Boogaloo';
+    src: url(./fonts/boogaloo.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Budmo';
+    src: url(./fonts/budmo.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url(./fonts/FredokaOne-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url(./fonts/merriweather-latin.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mirza';
+    src: url(./fonts/mirza400.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+ 
+@font-face {
+    font-family: 'Rochester';
+    src: url(./fonts/rochester.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceSans';
+    src: url(./fonts/source-sans-pro.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Conthrax';
+    src: url(./fonts/conthrax.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.conthrax {
+    font-family: 'Conthrax', Arial, Helvetica, sans-serif !important;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(./fonts/open-sans.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.courier {
+    font-family: Courier, monospace;
+}
+
+.text-shadows-1 {
+    text-shadow: 1px 1px 1px #40404040;
+}
+.text-shadows-2 {
+    text-shadow: 1px 1px 2px #40404069;
+}
+
+body {
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif !important;
+  }
+
+select:focus,
+input:focus,
+button:focus {
+  box-shadow: none !important;
+  border-color: rgb(222, 226, 230) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: inherit;
+  box-shadow: none;
+}
+
+.btn-outline-custom {
+  color: var(--btn-color, #6c757d);
+  border-color: var(--btn-color, #6c757d);
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.btn-outline-custom:hover,
+.btn-outline-custom.active {
+  color: var(--btn-color-contrast, #ffffff);
+  background-color: var(--btn-color, #6c757d);
+  border-color: var(--btn-color, #6c757d);
+}
+
+/* Bootstrap 5.3 définit --bs-modal-color à vide sur .modal, ce qui
+   empêche la couleur du texte de la modale de suivre data-bs-theme
+   local. On force l'utilisation de --bs-body-color, qui lui est bien
+   redéfini par data-bs-theme. */
+.modal-content {
+  color: var(--bs-body-color);
+}
+
+/* Couleur dédiée à la section Partage (violet).
+   NB : c'est le SEUL panneau d'options dont les boutons utilisent une classe
+   custom (btn-share / text-share). Les cinq autres panneaux colorent leurs
+   boutons avec des variantes Bootstrap natives (btn-warning, btn-danger,
+   btn-info, etc.) car leur couleur identifiante existe dans la palette
+   Bootstrap. Le violet/indigo, lui, n'y figure pas — d'où ce jeu de classes
+   et de variables fait main. Les variables sont redéfinies en mode sombre
+   pour garantir le contraste. */
+:root {
+  --share-color: #6f42c1;
+  --share-color-dark: #5a32a0;
+  --share-emphasis: #4c2a8a;
+  --share-on-color: #ffffff;
+  --share-subtle-bg: rgba(111, 66, 193, 0.15);
+  --share-subtle-border: rgba(111, 66, 193, 0.4);
+}
+[data-bs-theme="dark"] {
+  --share-color: #b794f6;
+  --share-color-dark: #9f78e3;
+  --share-emphasis: #d6bcfa;
+  --share-on-color: #1a1226;
+  --share-subtle-bg: rgba(183, 148, 246, 0.15);
+  --share-subtle-border: rgba(183, 148, 246, 0.45);
+}
+
+.text-share { color: var(--share-color); }
+.text-share-emphasis { color: var(--share-emphasis); }
+.bg-share-subtle { background-color: var(--share-subtle-bg); }
+.border-share-subtle { border-color: var(--share-subtle-border); }
+
+.btn-share {
+  --bs-btn-color: var(--share-on-color);
+  --bs-btn-bg: var(--share-color);
+  --bs-btn-border-color: var(--share-color);
+  --bs-btn-hover-color: var(--share-on-color);
+  --bs-btn-hover-bg: var(--share-color-dark);
+  --bs-btn-hover-border-color: var(--share-color-dark);
+  --bs-btn-active-color: var(--share-on-color);
+  --bs-btn-active-bg: var(--share-emphasis);
+  --bs-btn-active-border-color: var(--share-emphasis);
+  --bs-btn-disabled-color: var(--share-on-color);
+  --bs-btn-disabled-bg: var(--share-color);
+  --bs-btn-disabled-border-color: var(--share-color);
+  --bs-gradient: none;
+}
+
+/* ============================================================
+   Barre de tabulations du panneau Options
+   ----------------------------------------------------------
+   6 boutons, chacun avec sa couleur identifiante.
+   En mode sombre, la couleur est automatiquement éclaircie
+   via color-mix() — un seul jeu de couleurs à entretenir.
+   ============================================================ */
+:root {
+  --tab-playlists:  #ffc107;  --tab-playlists-ink:  #000;
+  --tab-apparence:  #6c757d;  --tab-apparence-ink:  #fff;
+  --tab-plus:       #198754;  --tab-plus-ink:       #fff;
+  --tab-reorder:    #0dcaf0;  --tab-reorder-ink:    #000;
+  --tab-partage:    #6f42c1;  --tab-partage-ink:    #fff;
+  --tab-nettoyage:  #dc3545;  --tab-nettoyage-ink:  #fff;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--tab-color);
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.tab-btn:hover,
+.tab-btn:focus,
+.tab-btn:focus-visible {
+  background: color-mix(in srgb, var(--tab-color) 18%, transparent);
+  color: var(--tab-color);
+  outline: none;
+  box-shadow: none;
+}
+.tab-btn.active {
+  background: var(--tab-color);
+  color: var(--tab-ink);
+}
+.tab-btn.active:hover,
+.tab-btn.active:focus {
+  background: var(--tab-color);
+  color: var(--tab-ink);
+}
+
+/* Variante mode sombre : éclaircissement auto via color-mix */
+[data-bs-theme="dark"] .tab-btn {
+  color: color-mix(in srgb, var(--tab-color) 70%, white);
+}
+[data-bs-theme="dark"] .tab-btn:hover,
+[data-bs-theme="dark"] .tab-btn:focus {
+  background: color-mix(in srgb, var(--tab-color) 25%, transparent);
+  color: color-mix(in srgb, var(--tab-color) 70%, white);
+}
+[data-bs-theme="dark"] .tab-btn.active,
+[data-bs-theme="dark"] .tab-btn.active:hover,
+[data-bs-theme="dark"] .tab-btn.active:focus {
+  background: color-mix(in srgb, var(--tab-color) 70%, white);
+  color: var(--tab-ink);
+}
+
+.tab-playlists { --tab-color: var(--tab-playlists); --tab-ink: var(--tab-playlists-ink); }
+.tab-apparence { --tab-color: var(--tab-apparence); --tab-ink: var(--tab-apparence-ink); }
+.tab-plus      { --tab-color: var(--tab-plus);      --tab-ink: var(--tab-plus-ink); }
+.tab-reorder   { --tab-color: var(--tab-reorder);   --tab-ink: var(--tab-reorder-ink); }
+.tab-partage   { --tab-color: var(--tab-partage);   --tab-ink: var(--tab-partage-ink); }
+.tab-nettoyage { --tab-color: var(--tab-nettoyage); --tab-ink: var(--tab-nettoyage-ink); }
+
+
+/* Ondes du haut-parleur masquées par défaut : sur la radio sélectionnée à
+   l'arrêt, seul le cône (.hpblock) est visible. */
+.speaker .hp0, .speaker .hp1, .speaker .hp2 { opacity: 0; }
+
+/* En lecture (classe .playing) : les 3 ondes s'animent en cascade.
+   Cycle de 2 s : elles apparaissent l'une après l'autre (toutes les 500 ms),
+   puis disparaissent ensemble, et ça recommence.
+   .hp0 = onde interne … .hp2 = onde externe. */
+.speaker.playing .hp0 { animation: hp-wave-0 2s linear infinite; }
+.speaker.playing .hp1 { animation: hp-wave-1 2s linear infinite; }
+.speaker.playing .hp2 { animation: hp-wave-2 2s linear infinite; }
+
+@keyframes hp-wave-0 {
+  0%, 24.99% { opacity: 0; }
+  25%, 100%  { opacity: 1; }
+}
+@keyframes hp-wave-1 {
+  0%, 49.99% { opacity: 0; }
+  50%, 100%  { opacity: 1; }
+}
+@keyframes hp-wave-2 {
+  0%, 74.99% { opacity: 0; }
+  75%, 100%  { opacity: 1; }
+}
