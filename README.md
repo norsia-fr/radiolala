@@ -16,12 +16,11 @@
 
 ---
 
-<!-- TODO: ajouter 1 à 3 captures d'écran dans docs/screenshots/ puis les référencer ici
 <p align="center">
-  <img src="docs/screenshots/player.png" alt="Le player" width="280">
-  <img src="docs/screenshots/themes.png" alt="Thèmes et palettes" width="280">
+  <img src="docs/screenshots/radiolala.webp" alt="Écran principal de Radiolala" width="240">
+  <img src="docs/screenshots/radiolala-options.webp" alt="Panneau d'options" width="240">
+  <img src="docs/screenshots/radiolala-green.webp" alt="Thème vert personnalisé" width="240">
 </p>
--->
 
 ## Présentation
 
